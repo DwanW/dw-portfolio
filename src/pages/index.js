@@ -1,5 +1,5 @@
 import React from "react"
-import { graphql, Link } from "gatsby"
+import { graphql } from "gatsby"
 
 import Layout from "../components/layout"
 import Image from "../components/image"
@@ -16,10 +16,6 @@ const IndexPage = ({ data }) => (
         <div style={{ maxWidth: `300px`, marginBottom: `1.45rem` }}>
             <Image />
         </div>
-        <Link to="/about/">Go to about</Link> <br />
-        <Link to="/archive/">Go to archive</Link> <br />
-        <Link to="/projects/">Go to projects</Link> <br />
-
     </Layout>
 )
 
