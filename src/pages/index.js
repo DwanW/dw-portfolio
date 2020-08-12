@@ -30,7 +30,6 @@ export const query = graphql`
           frontmatter {
             date
             title
-            description
           }
           html
           excerpt
