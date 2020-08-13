@@ -1,43 +1,80 @@
+const path = require(`path`);
+const resolveConfig = require(`tailwindcss/resolveConfig`);
+const tailwindConfig = require(`./tailwind.config.js`);
+const fullConfig = resolveConfig(tailwindConfig);
+require(`dotenv`).config({ path: `.env` });
+
 module.exports = {
-  siteMetadata: {
-    title: `Dwan | Full Stack Developer`,
-    description: `Build, Create, Solve and Collaborate.`,
-    author: `Dwan`,
-  },
-  plugins: [
-    `gatsby-plugin-react-helmet`,
-    `gatsby-plugin-styled-components`,
-    {
-      resolve: `gatsby-source-filesystem`,
-      options: {
-        name: `images`,
-        path: `${__dirname}/src/images`,
-      },
+    siteMetadata: {
+        title: `Dwan | Full Stack Developer`,
+        description: `Build, Create, Solve and Collaborate.`,
+        author: `Dwan Wang`,
     },
-    {
-        resolve: `gatsby-source-filesystem`,
-        options: {
-          name: `markdown`,
-          path: `${__dirname}/src/markdown-pages`,
+    plugins: [
+        `gatsby-plugin-react-helmet`,
+        'gatsby-plugin-eslint',
+        {
+            resolve: `gatsby-source-filesystem`,
+            options: {
+                name: `images`,
+                path: `${__dirname}/src/images`,
+            },
         },
-      },
-    `gatsby-transformer-remark`,
-    `gatsby-transformer-sharp`,
-    `gatsby-plugin-sharp`,
-    {
-      resolve: `gatsby-plugin-manifest`,
-      options: {
-        name: `gatsby-starter-default`,
-        short_name: `starter`,
-        start_url: `/`,
-        background_color: `#663399`,
-        theme_color: `#663399`,
-        display: `minimal-ui`,
-        icon: `src/images/gatsby-icon.png`, // This path is relative to the root of the site.
-      },
-    },
-    // this (optional) plugin enables Progressive Web App + Offline functionality
-    // To learn more, visit: https://gatsby.dev/offline
-    // `gatsby-plugin-offline`,
-  ],
+        {
+            resolve: `gatsby-source-filesystem`,
+            options: {
+                name: `markdown`,
+                path: `${__dirname}/src/markdown`,
+            },
+        },
+        `gatsby-transformer-json`,
+        {
+            resolve: `gatsby-source-filesystem`,
+            options: {
+                name: `data`,
+                path: path.join(__dirname, `src`, `data`),
+            },
+        },
+        `gatsby-transformer-remark`,
+        `gatsby-transformer-sharp`,
+        `gatsby-plugin-sharp`,
+        {
+            resolve: `gatsby-plugin-manifest`,
+            options: {
+                name: `Dwan | Full Stack Developer`,
+                short_name: `DwanW`,
+                start_url: `/`,
+                background_color: fullConfig.theme.colors.white,
+                theme_color: fullConfig.theme.colors.white,
+                display: `standalone`,
+                icon: `src/images/gatsby-icon.png`,
+            },
+        },
+        {
+            resolve: `gatsby-plugin-google-fonts`,
+            options: {
+                fonts: [`roboto: 400,700`],
+                display: 'swap'
+            }
+        },
+        {
+            resolve: `gatsby-plugin-postcss`,
+            options: {
+                postCssPlugins: [
+                    require(`tailwindcss`)(tailwindConfig),
+                    require(`autoprefixer`),
+                    ...(process.env.NODE_ENV === `production`
+                        ? [require(`cssnano`)]
+                        : []),
+                ],
+            },
+        },
+        {
+            resolve: `gatsby-plugin-purgecss`,
+            options: {
+                tailwind: true,
+                purgeOnly: [`src/css/tailwind.css`],
+            },
+        },
+    ],
 }
