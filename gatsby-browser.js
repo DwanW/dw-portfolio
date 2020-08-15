@@ -1,16 +1,16 @@
-// import React from "react";
-// import PropTypes from "prop-types";
+import React from "react";
+import PropTypes from "prop-types";
 
-// import "./src/css/tailwind.css";
-// import "./src/css/animate.css";
-// import "./src/css/global.css";
+import "./src/css/tailwind.css";
+import "./src/css/animate.css";
+import "./src/css/global.css";
 
-// import { ThemeProvider } from "./src/context/ThemeContext";
+import { ThemeProvider } from "./src/context/theme-context";
 
-// export const wrapRootElement = ({ element }) => (
-//   <ThemeProvider>{element}</ThemeProvider>
-// );
+export const wrapRootElement = ({ element }) => (
+  <ThemeProvider>{element}</ThemeProvider>
+);
 
-// wrapRootElement.propTypes = {
-//   element: PropTypes.node.isRequired,
-// };
+wrapRootElement.propTypes = {
+  element: PropTypes.node.isRequired,
+};
