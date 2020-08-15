@@ -19,10 +19,7 @@ const Navigation = () => {
       icon: file(relativePath: { eq: "icon.png" }) {
         childImageSharp {
           fixed(width: 32, height: 32) {
-            height
-            width
-            srcSetWebp
-            srcWebp
+            ...GatsbyImageSharpFixed
           }
         }
       }
@@ -51,12 +48,12 @@ const Navigation = () => {
       smooth: "easeInOutCubic",
     });
 
-  const SectionLink = x => {
-    const Icon = x.icon;
+  const SectionLink = sectionObj => {
+    const Icon = sectionObj.icon;
 
     return (
-      <Tooltip title={x.title} placement="right" arrow>
-        <div key={x.id} onClick={() => scrollTo(x.id)}>
+      <Tooltip key={sectionObj.id} title={sectionObj.title} placement="right" arrow>
+        <div onClick={() => scrollTo(sectionObj.id)}>
           <Icon />
         </div>
       </Tooltip>
