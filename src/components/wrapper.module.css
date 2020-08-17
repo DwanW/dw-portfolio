@@ -1,0 +1,11 @@
+.dark {
+    color: #e8eaf6;
+    background-color: #3f51b5;
+    @apply transition-all duration-200 ease-in-out;
+}
+  
+.light {
+    color: #3f51b5;
+    background-color: #e8eaf6;
+    @apply transition-all duration-200 ease-in-out;
+}

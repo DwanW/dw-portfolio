@@ -3,15 +3,16 @@ import React, { useContext, useEffect } from "react";
 import ThemeContext from "../context/theme-context.js";
 import Navigation from "./navigation";
 import SEO from "./seo";
-import styles from "./aos-wrapper.module.css";
+import styles from "./wrapper.module.css";
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
 const Wrapper = ({ children }) => {
   const { dark } = useContext(ThemeContext);
 
   useEffect(() => {
     if (typeof window !== `undefined`) {
-      const AOS = require("aos");
-      AOS.init({disable: 'mobile'});
+      AOS.init({disable: 'mobile', animatedClassName: 'aos-animate'});
     }
   }, []);
 
