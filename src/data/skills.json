@@ -1,0 +1,32 @@
+[
+    {
+      "icon": "../images/skills/web.png",
+      "name": "Web Design & Development",
+      "tech": "HTML/CSS/Javascript"
+    },
+    {
+      "icon": "../images/skills/react.png",
+      "name": "Frontend Javascript Frameworks",
+      "tech": "React.js"
+    },
+    {
+      "icon": "../images/skills/nodejs.png",
+      "name": "Backend Javascript Frameworks",
+      "tech": "Node.js/Express.js"
+    },
+    {
+      "icon": "../images/skills/firebase.png",
+      "name": "Cross Platform App Development",
+      "tech": "Firebase"
+    },
+    {
+      "icon": "../images/skills/python.png",
+      "name": "Python Scripting",
+      "tech": "Python/Flask/Pytest"
+    },
+    {
+      "icon": "../images/skills/database.png",
+      "name": "Database Management System",
+      "tech": "SQL/Postgres/MongoDB"
+    }
+  ]
