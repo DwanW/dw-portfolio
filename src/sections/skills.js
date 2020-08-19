@@ -16,7 +16,7 @@ const Skills = () => {
             tech
             icon {
               childImageSharp {
-                fixed(width: 20, height: 20) {
+                fixed(width: 32, height: 32) {
                     ...GatsbyImageSharpFixed
                 }
               }
@@ -34,10 +34,9 @@ const Skills = () => {
         {data.allSkillsJson.edges.map(({ node }, index) => (
           <div
             key={node.id}
-            className={`${styles.skill} md:mr-5 wow fadeIn`}
-            style={{
-              animationDelay: `${index * 100 + 100}ms`,
-            }}
+            className={`${styles.skill} md:mr-5`}
+            data-aos="fade-right"
+            data-aos-delay={`${index * 100 + 100}`}
           >
             <div className="flex items-center">
               <GatsbyImage
