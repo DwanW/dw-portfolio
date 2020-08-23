@@ -38,12 +38,12 @@ const Projects = () => {
       <Heading icon={FaDev} title="Projects" />
 
       <div className={styles.container}>
-        {data.allProjectsJson.edges.map(({ node }) => (
+        {data.allProjectsJson.edges.map(({ node }, idx) => (
           <div
             className={styles.project}
             key={node.id}
             data-aos="fadeIn"
-            data-aos-delay="200"
+            data-aos-delay={`${idx * 200 + 200}`}
           >
             <OutboundLink
               href={node.website || node.github}
@@ -59,17 +59,17 @@ const Projects = () => {
               <span className="sr-only">{node.title}</span>
             </OutboundLink>
             <h5 className="mt-4 font-semibold">{node.title}</h5>
-            <p className="mt-2 pb-5 text-sm text-justify">{node.description}</p>
+            <p className="mt-2 pb-5 text-sm text-left">{node.description}</p>
 
             <p className="pb-2 flex text-xs font-semibold">
-              {node.tags.map(x => (
-                <span key={x} className="mr-2">
-                  #{x}
+              {node.tags.map(tag => (
+                <span key={tag} className="mr-2">
+                  #{tag}
                 </span>
               ))}
             </p>
 
-            <div className="flex mt-2">
+            <div className="flex mt-2 justify-start">
               {node.website && (
                 <Tooltip title="Go to Website" placement="bottom">
                   <OutboundLink
