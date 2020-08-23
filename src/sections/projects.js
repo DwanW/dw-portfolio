@@ -38,11 +38,12 @@ const Projects = () => {
       <Heading icon={FaDev} title="Projects" />
 
       <div className={styles.container}>
-        {data.allProjectsJson.edges.map(({ node }, index) => (
+        {data.allProjectsJson.edges.map(({ node }) => (
           <div
+            className={styles.project}
             key={node.id}
             data-aos="fadeIn"
-            data-aos-delay={`${index * 200 + 200}`}
+            data-aos-delay="200"
           >
             <OutboundLink
               href={node.website || node.github}
@@ -105,7 +106,7 @@ const Projects = () => {
         className="mt-6"
         icon={FaGithub}
         title="Projects on GitHub"
-        onClick={() => window.open("https://pillai.xyz/github", "_blank")}
+        onClick={() => window.open("https://github.com/DwanW", "_blank")}
       />
     </section>
   );

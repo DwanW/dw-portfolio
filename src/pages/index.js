@@ -5,7 +5,9 @@ import styles from "./index.module.css";
 
 import Hero from '../sections/hero';
 import AboutMe from '../sections/about-me';
-import Skills from '../sections/skills'
+import Skills from '../sections/skills';
+import Projects from '../sections/projects';
+import Footer from '../sections/footer';
 
 const IndexPage = () => (
     <Wrapper>
@@ -13,6 +15,8 @@ const IndexPage = () => (
             <Hero />
             <AboutMe />
             <Skills />
+            <Projects />
+            <Footer />
         </div>
     </Wrapper>
 )

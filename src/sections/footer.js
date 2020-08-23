@@ -26,7 +26,7 @@ const Footer = () => {
       <Button
         className="mt-6"
         icon={FaStar}
-        title="Star this Project on GitHub"
+        title="Github Repo"
         onClick={() =>
           window.open(
             "https://github.com/DwanW/dw-portfolio",
