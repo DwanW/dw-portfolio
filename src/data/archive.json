@@ -1,55 +1,55 @@
 [
     {
-      "icon": "../images/projects/productlanding.png",
+      "icon": "../images/gadgets/product-landing.jpg",
       "title": "Earth Spectrum",
       "label": "pure html landing page design",
       "website": "https://product-dw.netlify.app/",
       "github": "https://github.com/DwanW/ProductLanding"
     },
     {
-      "icon": "../images/projects/bin2dec.png",
+      "icon": "../images/gadgets/bin2dec.jpg",
       "title": "Bin2Dec",
       "label": "Binary to Decimal convertor",
       "website": "https://bin2dec.netlify.app/",
       "github": "https://github.com/DwanW/Bin2Dec"
     },
     {
-      "icon": "../images/projects/note.png",
+      "icon": "../images/gadgets/note.jpg",
       "title": "Note Markup",
       "label": "ToDo Note Markup Editor",
       "website": "https://note-dw.netlify.app/",
       "github": "https://github.com/DwanW/Note"
     },
     {
-      "icon": "../images/projects/countdown.png",
+      "icon": "../images/gadgets/countdown.jpg",
       "title": "CountDown",
       "label": "Event CountDown Timer",
       "website": "https://countdown-dw.netlify.app/",
       "github": "https://github.com/DwanW/CountDown"
     },
     {
-      "icon": "../images/projects/rc.png",
+      "icon": "../images/gadgets/pearson.jpg",
       "title": "RC Calculator",
       "label": "Pearson's Regression Graphical Calculator",
       "website": "https://pearson.netlify.app/",
       "github": "https://github.com/DwanW/Pearson"
     },
     {
-      "icon": "../images/projects/lorem.png",
+      "icon": "../images/gadgets/lorem.jpg",
       "title": "Lorem",
       "label": "Lorem ipsum generator",
       "website": "https://lorem-dw.netlify.app/",
       "github": "https://github.com/DwanW/Lorem"
     },
     {
-      "icon": "../images/projects/pomodoro.png",
+      "icon": "../images/gadgets/pom.jpg",
       "title": "Pomodoro",
       "label": "Pomodoro Clock",
       "website": "https://pomo-dw.netlify.app/",
       "github": "https://github.com/DwanW/Pomodoro"
     },
     {
-      "icon": "../images/projects/arcana.png",
+      "icon": "../images/gadgets/arcana.jpg",
       "title": "Kiseki Arcana",
       "label": "Arcana Card wiki",
       "website": "https://arcana.netlify.app/",

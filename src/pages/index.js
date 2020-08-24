@@ -8,14 +8,18 @@ import AboutMe from '../sections/about-me';
 import Skills from '../sections/skills';
 import Projects from '../sections/projects';
 import Footer from '../sections/footer';
+import Archive from '../sections/archive';
 
 const IndexPage = () => (
     <Wrapper>
         <div className={`container ${styles.layout}`}>
             <Hero />
+            
             <AboutMe />
             <Skills />
             <Projects />
+            <Archive />
+
             <Footer />
         </div>
     </Wrapper>

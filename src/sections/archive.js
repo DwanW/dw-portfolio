@@ -20,7 +20,7 @@ const Archive = () => {
             github
             icon {
               childImageSharp {
-                fluid(maxWidth: 40) {
+                fluid(maxWidth: 400) {
                   ...GatsbyImageSharpFluid_withWebp
                 }
               }
@@ -40,27 +40,27 @@ const Archive = () => {
                     <div
                         className={styles.gadget}
                         key={node.id}
-                        data-aos="fadeIn"
-                        data-aos-delay={`${idx * 200 + 200}`}
+                        data-aos="zoom-in"
+                        data-aos-delay={`${idx * 50 + 200}`}
                     >
                         <Tooltip title={node.label} placement="top">
                             <OutboundLink
                                 href={node.website || node.github}
                                 target="_blank"
                                 rel="noopener noreferrer"
-                                className="w-full h-48 bg-black relative flex-center cursor-pointer rounded-lg shadow-lg"
+                                className="w-full h-auto bg-black relative flex-center cursor-pointer rounded-lg shadow-lg"
                             >
                                 <FaLink className="absolute" color="#FFF" size="5rem" />
                                 <GatsbyImage
                                     className="absolute w-full h-full object-cover rounded-lg hover:opacity-50 duration-200"
-                                    {...node.image.childImageSharp}
+                                    {...node.icon.childImageSharp}
                                 />
                                 <span className="sr-only">{node.title}</span>
                             </OutboundLink>
                         </Tooltip>
                         <h5 className="mt-4 font-semibold">{node.title}</h5>
 
-                        <div className="flex mt-2 justify-start">
+                        <div className="flex mt-2 justify-start pb-12">
                             {node.website && (
                                 <Tooltip title="Go to Website" placement="bottom">
                                     <OutboundLink
