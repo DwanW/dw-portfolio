@@ -1,5 +1,5 @@
 .container {
-  @apply grid pb-8 grid-cols-2;
+  @apply grid grid-cols-2 mt-2;
 }
   
 .gadget {

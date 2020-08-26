@@ -50,7 +50,6 @@ const Archive = () => {
                                 rel="noopener noreferrer"
                                 className="w-full h-auto bg-black relative flex-center cursor-pointer rounded-lg shadow-lg"
                             >
-                                <FaLink className="absolute" color="#FFF" size="5rem" />
                                 <GatsbyImage
                                     className="absolute w-full h-full object-cover rounded-lg hover:opacity-50 duration-200"
                                     {...node.icon.childImageSharp}
@@ -58,7 +57,7 @@ const Archive = () => {
                                 <span className="sr-only">{node.title}</span>
                             </OutboundLink>
                         </Tooltip>
-                        <h5 className="mt-4 font-semibold">{node.title}</h5>
+                        <h6 className="mt-4 font-light">{node.title}</h6>
 
                         <div className="flex mt-2 justify-start pb-12">
                             {node.website && (
