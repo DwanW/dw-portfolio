@@ -16,9 +16,9 @@ const Navigation = () => {
   
   const data = useStaticQuery(graphql`
     query {
-      icon: file(relativePath: { eq: "icon.png" }) {
+      photo: file(relativePath: { eq: "photo.png" }) {
         childImageSharp {
-          fixed(width: 32, height: 32) {
+          fixed(width: 32, height: 42) {
             ...GatsbyImageSharpFixed
           }
         }
@@ -68,7 +68,7 @@ const Navigation = () => {
     >
       <Tooltip title="Go to Top" placement="right" arrow>
         <div className="flex-center cursor-pointer" onClick={scrollToTop}>
-          <GatsbyImage className="grayscale" {...data.icon.childImageSharp} />
+          <GatsbyImage className="grayscale" {...data.photo.childImageSharp} />
         </div>
       </Tooltip>
 

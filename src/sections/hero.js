@@ -12,13 +12,6 @@ const Hero = () => {
   const [showSocial, setShowSocial] = useState(false);
   const data = useStaticQuery(graphql`
     {
-      photo: file(relativePath: { eq: "photo.jpg" }) {
-        childImageSharp {
-          fluid(maxWidth: 512) {
-            ...GatsbyImageSharpFluid
-          }
-        }
-      }
       logo: file(relativePath: { eq: "logo.png" }) {
         childImageSharp {
           fluid(maxHeight: 512) {
@@ -55,15 +48,14 @@ const Hero = () => {
     <section id="hero" className="min-h-screen flex items-center container">
       <div className="w-full grid grid-cols-1 lg:grid-cols-5 row-gap-8 lg:gap-16 justify-center lg:justify-start items-center mt-8 md:mt-12 lg:mt-0">
         <div ref={parallaxRef} className="col-span-2">
-          <div className="max-w-lg mx-auto" data-depth="0.4">
-            <GatsbyImage {...data.photo.childImageSharp} />
-          </div>
-        </div>
-        <div className="col-span-3">
+          <div className="max-w-xs mx-auto" data-depth="0.2">
           <GatsbyImage
             className="max-w-lg max-h-32 mx-auto lg:mx-0"
             {...data.logo.childImageSharp}
           />
+          </div>
+        </div>
+        <div className="col-span-3">
 
           <h1 className="sr-only">
             Dwan Wang <br />

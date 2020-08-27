@@ -2,7 +2,7 @@
 html,
 body {
   font-size: 14px;
-  font-family: "Fira Sans", sans-serif;
+  font-family: "roboto", sans-serif;
   overflow-x: hidden;
   position: relative;
 }
@@ -62,12 +62,12 @@ section:hover .heading {
 }
 
 .grayscale {
-  filter: contrast(0%) grayscale(100%);
+  filter: grayscale(100%);
   @apply transition-default;
 }
 
 .grayscale:hover {
-  filter: contrast(100%) grayscale(0%);
+  filter: grayscale(0%);
   @apply transition-default;
 }
 
