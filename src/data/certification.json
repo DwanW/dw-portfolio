@@ -1,0 +1,27 @@
+  
+[
+    {
+      "title": "Advanced JS concepts",
+      "subtitle": "Udemy"
+    },
+    {
+      "title": "The Complete React/Redux, Hook GraphQL Course",
+      "subtitle": "Udemy"
+    },
+    {
+      "title": "Creative CSS animations, transitions, transformations",
+      "subtitle": "Udemy"
+    },
+    {
+      "title": "Complete Node.js Course",
+      "subtitle": "Udemy"
+    },
+    {
+      "title": "SQL, Rest API with Flask & Python",
+      "subtitle": "EvolveU Full Stack Development"
+    },
+    {
+        "title": "Test driven Development, Unit Testing in Python",
+        "subtitle": "EvolveU Full Stack Development"
+    }
+  ]

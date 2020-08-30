@@ -1,6 +1,6 @@
 import {
     AiFillSafetyCertificate,
-    FaAward,
+    // FaAward,
     FaDev,
     FaInfoCircle,
     GoTools,
@@ -19,7 +19,7 @@ import {
     { id: "skills", title: "Skills", icon: GoTools },
     { id: "projects", title: "Projects", icon: FaDev },
     // { id: "blog", title: "Blog", icon: IoIosJournal },
-    { id: "achievements", title: "Achievements", icon: FaAward },
+    // { id: "achievements", title: "Achievements", icon: FaAward },
     {
       id: "certifications",
       title: "Certifications",

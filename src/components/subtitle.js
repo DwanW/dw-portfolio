@@ -13,23 +13,21 @@ const Subtitle = ({ onDone }) => (
     <code className="w-full text-sm leading-loose">
       <div>
         <span className="text-blue-600">const</span>{" "}
-        <span className="text-orange-400">dwanW</span>:{" "}
-        <span className="text-orange-400">Array</span>&lt;
-        <span className="text-green-400">Ingredient</span>&gt;{" "}
-        <span className="text-blue-600">=</span> [
+        <span className="text-orange-400">developer</span>:{" "}
+        <span className="text-blue-600">=</span> {'{'}
       </div>
       <div className="lg:pl-8">
-        <span className="text-red-500">Designer</span>,{" "}
-        <span className="text-red-500">Developer</span>,{" "}
-        <span className="text-red-500">Photographer</span>,{" "}
-        <span className="text-red-500">Writer</span>,{" "}
+        <span className="text-red-500">Design</span>:{" "}
+        <span className="text-teal-400">Desirability</span>{" "}+{" "}
+        <span className="text-teal-400">Viability</span>{" "}+{" "}
+        <span className="text-teal-400">Feasibility</span>,
       </div>
       <div className="lg:pl-8">
-        <span className="text-red-500">Sugar</span>,{" "}
-        <span className="text-red-500">Spice</span>, ...
-        <span className="text-red-500">everythingNice</span>,
+        <span className="text-red-500">Development</span>:{" "}
+        <span className="text-teal-400">Simplicity</span>{" "}+{" "}
+        <span className="text-teal-400">Breaking Complexity</span>,
       </div>
-      <div>];</div>
+      <div>{'}'};</div>
     </code>
   </Typist>
 );

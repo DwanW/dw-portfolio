@@ -7,6 +7,7 @@ import Hero from '../sections/hero';
 import AboutMe from '../sections/about-me';
 import Skills from '../sections/skills';
 import Projects from '../sections/projects';
+import Certifications from "../sections/certifications";
 import Archive from '../sections/archive';
 import Contact from '../sections/contact';
 import Footer from '../sections/footer';
@@ -18,6 +19,7 @@ const IndexPage = () => (
             <AboutMe />
             <Skills />
             <Projects />
+            <Certifications />
             <Archive />
             <Contact />
             <Footer />
