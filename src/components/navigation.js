@@ -13,7 +13,7 @@ import styles from "./navigation.module.css";
 const Navigation = () => {
   const [isMobile, setIsMobile] = useState(false);
   const { dark, toggleDark } = useContext(ThemeContext);
-  
+
   const data = useStaticQuery(graphql`
     query {
       photo: file(relativePath: { eq: "photo.png" }) {
@@ -52,7 +52,7 @@ const Navigation = () => {
     const Icon = sectionObj.icon;
 
     return (
-      <Tooltip key={sectionObj.id} title={sectionObj.title} placement="right" arrow>
+      <Tooltip key={sectionObj.id} title={sectionObj.title} placement="bottom" arrow>
         <div onClick={() => scrollTo(sectionObj.id)}>
           <Icon />
         </div>
@@ -62,9 +62,11 @@ const Navigation = () => {
 
   return (
     <div
-      className={`${styles.container} animated ${
-        isMobile ? "fadeInDown" : "fadeInLeft"
-      }`}
+      className={
+        `${styles.container} 
+        animated ${isMobile ? "fadeInDown" : "fadeInLeft bg"}
+        ${dark ? "hover:bg-white" : "hover:bg-blue-600"}`
+      }
     >
       <Tooltip title="Go to Top" placement="right" arrow>
         <div className="flex-center cursor-pointer" onClick={scrollToTop}>
@@ -72,16 +74,19 @@ const Navigation = () => {
         </div>
       </Tooltip>
 
-      <div className="hidden md:flex flex-col justify-center items-center">
+      <div className="flex flex-col justify-center items-center">
         <div className={styles.menu}>
           <MdMenu />
         </div>
-        <div className={styles.sectionLinks}>{sections.map(SectionLink)}</div>
+        <div className={`${styles.sectionLinks} 
+          ${dark ? "text-blue-600" : "text-white"}`}>
+          {sections.map(SectionLink)}
+        </div>
       </div>
 
       <Tooltip title="Toggle Dark Mode" placement="right" arrow>
         <div
-          className="flex-center cursor-pointer hover:text-primary-500"
+          className={`flex-center cursor-pointer ${dark ? "hover:text-primary-600" : "hover:text-primary-100"}`}
           onClick={toggleDark}
         >
           {dark ? <IoIosMoon /> : <IoIosSunny />}

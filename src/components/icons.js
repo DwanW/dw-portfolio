@@ -1,16 +1,14 @@
-import { AiFillInstagram, AiFillSafetyCertificate } from "react-icons/ai";
+import { AiFillSafetyCertificate } from "react-icons/ai";
 import {
   FaAngleRight,
   FaAward,
   FaBoxOpen,
   FaDev,
-  FaDribbble,
   FaFacebookF,
   FaGithub,
   FaGithubAlt,
   FaHeart,
   FaInfoCircle,
-  FaInstagram,
   FaLink,
   FaLinkedinIn,
   FaPaintBrush,
@@ -39,19 +37,16 @@ import {
 } from "react-icons/md";
 
 export {
-  AiFillInstagram,
   AiFillSafetyCertificate,
   FaAngleRight,
   FaAward,
   FaBoxOpen,
   FaDev,
-  FaDribbble,
   FaFacebookF,
   FaGithub,
   FaGithubAlt,
   FaHeart,
   FaInfoCircle,
-  FaInstagram,
   FaLink,
   FaLinkedinIn,
   FaPaintBrush,

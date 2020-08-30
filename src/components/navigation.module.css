@@ -3,37 +3,39 @@
   }
   
   .container {
-    @apply fixed inset-x-0 top-0 z-20 flex justify-between items-center p-4;
+    @apply fixed inset-x-0 top-0 z-20 flex justify-between items-center p-4 duration-300;
+  }
+
+  .container .section-links {
+    @apply flex fixed;
   }
   
-  @screen md {
-    .container .section-links {
-      @apply flex;
-    }
-  
-    .container .menu {
-      @apply opacity-100 transition-default;
-    }
-  
-    .container:hover .menu {
-      @apply h-0 opacity-0 transition-default;
-    }
-  
-    .container .section-links div {
-      cursor: pointer;
-      box-sizing: content-box;
-      @apply h-0 opacity-0 transition-default;
-    }
-  
-    .container:hover .section-links div {
-      padding: 0 0.6em;
-      @apply h-4 opacity-100 transition-default;
-    }
+  .container:hover {
+    @apply duration-300 shadow-xl;
+  }
+
+  .container .menu {
+    @apply fixed opacity-100 duration-150;
+  }
+
+  .container:hover .menu {
+    @apply opacity-0 duration-150;
+  }
+
+  .container .section-links div {
+    cursor: pointer;
+    box-sizing: content-box;
+    @apply opacity-0 duration-300;
+  }
+
+  .container:hover .section-links div {
+    padding: 0 0.5em;
+    @apply opacity-100 duration-300;
   }
   
   @screen lg {
     .container {
-      @apply inset-x-auto inset-y-0 left-0 flex-col;
+      @apply inset-x-auto inset-y-0 right-0 flex-col;
     }
   
     .container:hover .menu {

@@ -1,20 +1,11 @@
 import {
-    FaDev,
-    FaDribbble,
     FaFacebookF,
     FaGithubAlt,
-    FaInstagram,
     FaLinkedinIn,
     FaTwitter,
   } from "../components/icons";
   
   const social = [
-    {
-      title: "Instagram",
-      icon: FaInstagram,
-      link: "https://pillai.xyz/instagram",
-      class: "bg-instagram",
-    },
     {
       title: "LinkedIn",
       icon: FaLinkedinIn,
@@ -26,18 +17,6 @@ import {
       icon: FaGithubAlt,
       link: "https://github.com/DwanW",
       class: "bg-github",
-    },
-    {
-      title: "Dribbble",
-      icon: FaDribbble,
-      link: "https://github.com/DwanW",
-      class: "bg-dribbble",
-    },
-    {
-      title: "DEV Community",
-      icon: FaDev,
-      link: "https://github.com/DwanW",
-      class: "bg-dev",
     },
     {
       title: "Facebook",
