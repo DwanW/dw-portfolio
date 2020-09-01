@@ -53,7 +53,7 @@ module.exports = {
                 background_color: fullConfig.theme.colors.white,
                 theme_color: fullConfig.theme.colors.white,
                 display: `standalone`,
-                icon: `src/images/gatsby-icon.png`,
+                icon: `src/images/icon.png`,
             },
         },
         {

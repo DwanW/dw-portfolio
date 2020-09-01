@@ -1,9 +1,9 @@
 {
-  "name": "gatsby-starter-default",
+  "name": "dwanw-portfolio",
   "private": true,
-  "description": "A simple starter to get up and developing quickly with Gatsby",
-  "version": "0.1.0",
-  "author": "Kyle Mathews <mathews.kyle@gmail.com>",
+  "description": "Created with Gatsby",
+  "version": "1.0.1",
+  "author": "Dwan Wang <dwanvang@gmail.com>",
   "dependencies": {
     "@material-ui/core": "^4.11.0",
     "@sendgrid/mail": "^7.2.4",
