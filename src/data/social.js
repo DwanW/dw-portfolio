@@ -27,7 +27,7 @@ import {
     {
       title: "Twitter",
       icon: FaTwitter,
-      link: "https://pillai.xyz/twitter",
+      link: "https://twitter.com/Dwan87734256",
       class: "bg-twitter",
     },
   ];
