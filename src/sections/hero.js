@@ -1,11 +1,14 @@
 import { graphql, useStaticQuery } from "gatsby";
 import GatsbyImage from "gatsby-image";
 import Parallax from "parallax-js";
-import React, { useRef, useState, useEffect } from "react";
+import React, { useRef, useState, useEffect, useContext } from "react";
+import ThemeContext from '../context/theme-context';
 import Social from "../components/social";
 import Subtitle from "../components/subtitle";
 
 const Hero = () => {
+  const { dark } = useContext(ThemeContext);
+
   const parallaxRef = useRef(null);
   const [parallax, setParallax] = useState(null);
   const [isMobile, setIsMobile] = useState(false);
@@ -13,6 +16,13 @@ const Hero = () => {
   const data = useStaticQuery(graphql`
     {
       logo: file(relativePath: { eq: "logo.png" }) {
+        childImageSharp {
+          fluid(maxHeight: 512) {
+            ...GatsbyImageSharpFluid_tracedSVG
+          }
+        }
+      }
+      logo_dark: file(relativePath: { eq: "logo_dark.png" }) {
         childImageSharp {
           fluid(maxHeight: 512) {
             ...GatsbyImageSharpFluid_tracedSVG
@@ -49,10 +59,16 @@ const Hero = () => {
       <div className="w-full grid grid-cols-1 lg:grid-cols-5 row-gap-8 lg:gap-16 justify-center lg:justify-start items-center mt-8 md:mt-12 lg:mt-0">
         <div ref={parallaxRef} className="col-span-2">
           <div className="max-w-xs mx-auto" data-depth="0.2">
+          {dark ? 
           <GatsbyImage
             className="max-w-lg max-h-32 mx-auto lg:mx-0"
             {...data.logo.childImageSharp}
+          /> :
+          <GatsbyImage
+            className="max-w-lg max-h-32 mx-auto lg:mx-0"
+            {...data.logo_dark.childImageSharp}
           />
+          }
           </div>
         </div>
         <div className="col-span-3">
