@@ -21,7 +21,7 @@
   
   .container.light > div:first-child {
     color: #ffffff;
-    background-color: #222222;
+    background-color: #3f51b5;
     @apply transition-default;
   }
   
@@ -43,12 +43,12 @@
   
   .container > div:last-child {
     border-color: #ffffff;
-    @apply absolute w-full h-full border-2 z-10;
+    @apply absolute w-full h-full z-10 border-b-2 border-r-2;
     top: 4px;
     left: 4px;
   }
   
   .container.light > div:last-child {
-    border-color: #222222;
+    border-color: #3f51b5;
     @apply transition-default;
   }

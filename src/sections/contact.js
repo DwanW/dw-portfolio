@@ -84,7 +84,7 @@ const Contact = () => {
             type="text"
             ref={nameRef}
             value={name}
-            placeholder="Regina Phalange"
+            placeholder="Ken Thompson"
             onChange={e => setName(e.target.value)}
             className="border-2 border-gray-600 focus:border-gray-300 px-4 py-2 text-lg bg-transparent duration-200 focus:outline-none"
           />
