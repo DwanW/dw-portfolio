@@ -13,7 +13,7 @@ const Subtitle = ({ onDone }) => (
     <code className="w-full text-sm leading-loose">
       <div>
         <span className="text-blue-600">const</span>{" "}
-        <span className="text-orange-400">developer</span>:{" "}
+        <span className="text-orange-500">developer</span>:{" "}
         <span className="text-blue-600">=</span> {'{'}
       </div>
       <div className="lg:pl-8">
@@ -25,7 +25,7 @@ const Subtitle = ({ onDone }) => (
       <div className="lg:pl-8">
         <span className="text-red-500">Development</span>:{" "}
         <span className="text-teal-400">Simplicity</span>{" "}+{" "}
-        <span className="text-teal-400">Breaking Complexity</span>,
+        <span className="text-teal-400">Effective Communication</span>,
       </div>
       <div>{'}'};</div>
     </code>
