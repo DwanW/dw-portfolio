@@ -20,7 +20,7 @@
       "title": "Calorie Calculator",
       "description": "simple and straight forward tool for health management",
       "tags": ["webdev","react", "node.js", "postgres", "material UI"],
-      "website": "dw-calorie.herokuapp.com/",
+      "website": "https://dw-calorie.herokuapp.com/",
       "github": "https://github.com/DwanW/tier3-calorie"
     }
   ]
