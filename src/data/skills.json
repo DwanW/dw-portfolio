@@ -12,7 +12,7 @@
     {
       "icon": "../images/skills/node.png",
       "name": "Backend Javascript Frameworks",
-      "tech": "Node.js/Express.js"
+      "tech": "Node.js/Express.js/socket.io"
     },
     {
       "icon": "../images/skills/firebase.png",
