@@ -1,5 +1,12 @@
 [
     {
+      "icon": "../images/gadgets/weather.jpg",
+      "title": "Location Forecast",
+      "label": "node express api for geolocation",
+      "website": "https://dw-node-weather.herokuapp.com/",
+      "github": "https://github.com/DwanW/node-weather"
+    },
+    {
       "icon": "../images/gadgets/product-landing.jpg",
       "title": "Earth Spectrum",
       "label": "pure html landing page design",

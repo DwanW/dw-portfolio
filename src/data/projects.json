@@ -1,5 +1,13 @@
 [
     {
+      "image": "../images/projects/chat.png",
+      "title": "Live Chat",
+      "description": "A simple tool to group chat.",
+      "tags": ["webdev", "node", "javascript", "socket.io"],
+      "website": "https://dw-chat-app.herokuapp.com/",
+      "github": "https://github.com/DwanW/dw-chat"
+    },
+    {
       "image": "../images/projects/camel.png",
       "title": "Camel Delivery",
       "description": "A food online ordering platform that features scheduled delivery plan for the best food in your local area.",
