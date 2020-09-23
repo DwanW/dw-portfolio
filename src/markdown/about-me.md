@@ -4,7 +4,7 @@ id: "about-me"
 
 Hi there!
 
-I'm Dwan. I'm a full-stack developer transitioned from a geologist, with experience evaluating resources and helping organizations make important decisions. My background in solving complex problems and my enthusiasm for the technology ignites the passion for the tech field.
+I'm a full-stack developer who is passionate in application design and development, I love tackling challenging problems and have strong proficiency in modern web technologies.
 
 Being a developer is addictive at times. “I often find myself trying to come up with solutions to a problem in dreams, and have so much fun on my projects where, as soon as I wake up, I would jump out of bed and go straight to the computer to work on it”. That is me in simple terms.
 
