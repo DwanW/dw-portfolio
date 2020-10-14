@@ -5,6 +5,7 @@ import styles from "./index.module.css";
 
 import Hero from '../sections/hero';
 import AboutMe from '../sections/about-me';
+import Work from '../sections/work';
 import Skills from '../sections/skills';
 import Projects from '../sections/projects';
 import Certifications from "../sections/certifications";
@@ -17,6 +18,7 @@ const IndexPage = () => (
         <div className={`container ${styles.layout}`}>
             <Hero />
             <AboutMe />
+            <Work />
             <Skills />
             <Projects />
             <Certifications />

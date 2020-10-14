@@ -1,0 +1,11 @@
+
+[
+    {
+      "icon": "../images/work/mcw.png",
+      "title": "MegaCloud Works.",
+      "subtitle": "Full Stack Developer",
+      "period": "Sept 2020 - current",
+      "location": "Remotely, Canada",
+      "specialization": "React, Node.js, MongoDB"
+    }
+]
