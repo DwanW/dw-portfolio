@@ -17,15 +17,17 @@ const Subtitle = ({ onDone }) => (
         <span className="text-blue-600">=</span> {'{'}
       </div>
       <div className="lg:pl-8">
-        <span className="text-red-500">Design</span>:{" "}
-        <span className="text-teal-400">Desirability</span>{" "}+{" "}
-        <span className="text-teal-400">Viability</span>{" "}+{" "}
-        <span className="text-teal-400">Feasibility</span>,
+        <span className="text-red-500">Growth</span>:{" "}
+        <span className="text-teal-400">Associating</span>{" "}+{" "}
+        <span className="text-teal-400">Questioning</span>{" "}+{" "}
+        <span className="text-teal-400">Observing</span>{" "}+{" "}
+        <span className="text-teal-400">Experimenting</span>,
       </div>
       <div className="lg:pl-8">
-        <span className="text-red-500">Development</span>:{" "}
-        <span className="text-teal-400">Simplicity</span>{" "}+{" "}
-        <span className="text-teal-400">Effective Communication</span>,
+        <span className="text-red-500">Success</span>:{" "}
+        <span className="text-teal-400">Imagination</span>{" "}+{" "}
+        <span className="text-teal-400">Creativity</span>{" "}+{" "}
+        <span className="text-teal-400">Innovation</span>,
       </div>
       <div>{'}'};</div>
     </code>
