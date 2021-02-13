@@ -1,11 +1,26 @@
-
 [
-    {
-      "icon": "../images/work/mcw.png",
-      "title": "MegaCloud Works.",
-      "subtitle": "Full Stack Developer",
-      "period": "Sept 2020 - current",
-      "location": "Remotely, Canada",
-      "specialization": "React, Node.js, MongoDB"
-    }
+  {
+    "icon": "../images/work/apollo.png",
+    "title": "Apollo Scientific.",
+    "subtitle": "Full Stack Developer",
+    "period": "Feb 2021 - current",
+    "location": "Remotely, Canada",
+    "specialization": "React, Node.js, Material UI"
+  },
+  {
+    "icon": "../images/work/dw.png",
+    "title": "DW Interactive Dev.",
+    "subtitle": "Full Stack Web Developer",
+    "period": "Nov 2020 - current",
+    "location": "Remotely, Canada",
+    "specialization": "React, Gatsby, Netlify CMS"
+  },
+  {
+    "icon": "../images/work/mcw.png",
+    "title": "MegaCloud Works.",
+    "subtitle": "Full Stack Developer",
+    "period": "Sept 2020 - current",
+    "location": "Remotely, Canada",
+    "specialization": "React, Node.js, MongoDB"
+  }
 ]
