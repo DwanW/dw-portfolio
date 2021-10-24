@@ -1,79 +1,96 @@
-import React, { useRef, useState } from "react";
-import Heading from "../components/heading";
-import { IoIosPaperPlane } from "../components/icons";
-import Button from "../components/button";
+import React, { useRef, useState } from "react"
+import Heading from "../components/heading"
+import { IoIosPaperPlane } from "../components/icons"
+import Button from "../components/button"
+
+function encode(data) {
+  return Object.keys(data)
+    .map(key => encodeURIComponent(key) + "=" + encodeURIComponent(data[key]))
+    .join("&")
+}
 
 const Contact = () => {
-  const nameRef = useRef(null);
-  const [name, setName] = useState("");
+  const nameRef = useRef(null)
+  const [name, setName] = useState("")
 
-  const emailRef = useRef(null);
-  const [email, setEmail] = useState("");
+  const emailRef = useRef(null)
+  const [email, setEmail] = useState("")
 
-  const messageRef = useRef(null);
-  const [message, setMessage] = useState("");
+  const messageRef = useRef(null)
+  const [message, setMessage] = useState("")
 
-  const [buttonText, setButtonText] = useState("Send Message");
+  const [buttonText, setButtonText] = useState("Send Message")
 
   const isEmailValid = email => {
-    var re = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
-    return re.test(String(email).toLowerCase());
-  };
+    var re = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
+    return re.test(String(email).toLowerCase())
+  }
 
   const onSubmit = e => {
-    let formValid = true;
-    e.preventDefault();
+    let formValid = true
+    e.preventDefault()
+    const form = e.target
 
     if (!name) {
-      formValid = false;
-      const nodeName = nameRef.current;
-      nodeName.classList.add("border-red-500", "animated", "shake");
+      formValid = false
+      const nodeName = nameRef.current
+      nodeName.classList.add("border-red-500", "animated", "shake")
       setTimeout(() => {
-        nodeName.classList.remove("border-red-500", "animated", "shake");
-      }, 2000);
+        nodeName.classList.remove("border-red-500", "animated", "shake")
+      }, 2000)
     }
 
     if (!email || !isEmailValid(email)) {
-      formValid = false;
-      const nodeName = emailRef.current;
-      nodeName.classList.add("border-red-500", "animated", "shake");
+      formValid = false
+      const nodeName = emailRef.current
+      nodeName.classList.add("border-red-500", "animated", "shake")
       setTimeout(() => {
-        nodeName.classList.remove("border-red-500", "animated", "shake");
-      }, 2000);
+        nodeName.classList.remove("border-red-500", "animated", "shake")
+      }, 2000)
     }
 
     if (!message) {
-      formValid = false;
-      const nodeName = messageRef.current;
-      nodeName.classList.add("border-red-500", "animated", "shake");
+      formValid = false
+      const nodeName = messageRef.current
+      nodeName.classList.add("border-red-500", "animated", "shake")
       setTimeout(() => {
-        nodeName.classList.remove("border-red-500", "animated", "shake");
-      }, 2000);
+        nodeName.classList.remove("border-red-500", "animated", "shake")
+      }, 2000)
     }
 
     if (formValid) {
-      const url = "https://b0xc37agbg.execute-api.us-east-1.amazonaws.com/production";
       const opts = {
         method: "POST",
-        body: JSON.stringify({ name, email, message }),
-      };
+        body: encode({
+          "form-name": form.getAttribute("name"),
+          name,
+          email,
+          message,
+        }),
+      }
 
-      fetch(url, opts)
+      fetch("/", opts)
         .then(() => {
-          setButtonText("Message Received!");
-          setName("");
-          setEmail("");
-          setMessage("");
+          setButtonText("Message Received!")
+          setName("")
+          setEmail("")
+          setMessage("")
         })
-        .catch(() => setButtonText("An Error Occurred!"));
+        .catch(() => setButtonText("An Error Occurred!"))
     }
-  };
+  }
 
   return (
     <section id="contact">
       <Heading icon={IoIosPaperPlane} title="Contact" />
 
-      <form className="lg:w-2/3 xl:w-1/2">
+      <form
+        className="lg:w-2/3 xl:w-1/2"
+        name="portfolio-contact"
+        method="POST"
+        data-netlify="true"
+        onSubmit={onSubmit}
+      >
         <label htmlFor="name" className="w-4/5 md:w-2/3 flex flex-col">
           <h6 className="font-semibold text-sm mb-2">Name</h6>
           <input
@@ -125,11 +142,10 @@ const Contact = () => {
           className="mt-6"
           icon={IoIosPaperPlane}
           title={buttonText}
-          onClick={onSubmit}
         />
       </form>
     </section>
-  );
-};
+  )
+}
 
-export default Contact;
+export default Contact

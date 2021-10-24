@@ -1,11 +1,9 @@
 .layout {
-    @apply grid grid-cols-1 row-gap-16;
-  }
-  
-  @screen md {
-    .layout {
-      @apply row-gap-24;
-    }
-  }
+  @apply grid grid-cols-1 gap-y-16;
+}
 
-  
+@screen md {
+  .layout {
+    @apply gap-y-24;
+  }
+}

@@ -1,12 +1,12 @@
-import Tooltip from "@material-ui/core/Tooltip";
-import { graphql, useStaticQuery } from "gatsby";
-import GatsbyImage from "gatsby-image";
-import { OutboundLink } from "gatsby-plugin-google-gtag";
-import React from "react";
-import Button from "../components/button";
-import Heading from "../components/heading";
-import { FaDev, FaGithub, FaLink } from "../components/icons";
-import styles from "./projects.module.css";
+import Tooltip from "@material-ui/core/Tooltip"
+import { graphql, useStaticQuery } from "gatsby"
+import { GatsbyImage } from "gatsby-plugin-image"
+import { OutboundLink } from "gatsby-plugin-google-gtag"
+import React from "react"
+import Button from "../components/button"
+import Heading from "../components/heading"
+import { FaDev, FaGithub, FaLink } from "../components/icons"
+import { container, project } from "./projects.module.css"
 
 const Projects = () => {
   const data = useStaticQuery(graphql`
@@ -22,25 +22,23 @@ const Projects = () => {
             github
             image {
               childImageSharp {
-                fluid(maxWidth: 400) {
-                  ...GatsbyImageSharpFluid_withWebp
-                }
+                gatsbyImageData(width: 400)
               }
             }
           }
         }
       }
     }
-  `);
+  `)
 
   return (
     <section id="projects">
       <Heading icon={FaDev} title="Projects" />
 
-      <div className={styles.container}>
+      <div className={container}>
         {data.allProjectsJson.edges.map(({ node }, idx) => (
           <div
-            className={styles.project}
+            className={project}
             key={node.id}
             data-aos="fadeIn"
             data-aos-delay={`${idx * 200 + 200}`}
@@ -53,8 +51,9 @@ const Projects = () => {
             >
               <FaLink className="absolute" color="#FFF" size="5rem" />
               <GatsbyImage
-                className="absolute w-full h-full object-cover rounded-lg hover:opacity-50 duration-200"
-                {...node.image.childImageSharp}
+                className="max-w-sm h-full object-cover rounded-lg hover:opacity-50 duration-200"
+                image={node.image.childImageSharp.gatsbyImageData}
+                alt="project item"
               />
               <span className="sr-only">{node.title}</span>
             </OutboundLink>
@@ -109,7 +108,7 @@ const Projects = () => {
         onClick={() => window.open("https://github.com/DwanW", "_blank")}
       />
     </section>
-  );
-};
+  )
+}
 
-export default Projects;
+export default Projects

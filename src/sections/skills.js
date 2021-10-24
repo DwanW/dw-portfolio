@@ -1,9 +1,9 @@
-import { graphql, useStaticQuery } from "gatsby";
-import GatsbyImage from "gatsby-image";
-import React from "react";
-import Heading from "../components/heading";
-import { GoTools } from "../components/icons";
-import styles from "./skills.module.css";
+import { graphql, useStaticQuery } from "gatsby"
+import { GatsbyImage } from "gatsby-plugin-image"
+import React from "react"
+import Heading from "../components/heading"
+import { GoTools } from "../components/icons"
+import * as styles from "./skills.module.css"
 
 const Skills = () => {
   const data = useStaticQuery(graphql`
@@ -16,16 +16,14 @@ const Skills = () => {
             tech
             icon {
               childImageSharp {
-                fixed(width: 32, height: 32) {
-                    ...GatsbyImageSharpFixed
-                }
+                gatsbyImageData(width: 32, height: 32)
               }
             }
           }
         }
       }
     }
-  `);
+  `)
   return (
     <section id="skills">
       <Heading icon={GoTools} title="Skills" />
@@ -40,8 +38,9 @@ const Skills = () => {
           >
             <div className="flex items-center">
               <GatsbyImage
-                className="w-5 h-5 mr-5"
-                {...node.icon.childImageSharp}
+                className="w-8 h-8 mr-5"
+                image={node.icon.childImageSharp.gatsbyImageData}
+                alt="skill icon"
               />
               <div>
                 <h6 className="text-xs font-semibold leading-none">
@@ -59,7 +58,7 @@ const Skills = () => {
         ))}
       </div>
     </section>
-  );
-};
+  )
+}
 
-export default Skills;
+export default Skills

@@ -1,15 +1,14 @@
-
-import { graphql, useStaticQuery } from "gatsby";
-import GatsbyImage from "gatsby-image";
-import React, { useContext, useState } from "react";
-import Heading from "../components/heading";
-import { MdLocationOn, MdMoreHoriz, MdWork } from "../components/icons";
-import ThemeContext from "../context/theme-context";
-import Tooltip from "@material-ui/core/Tooltip";
+import { graphql, useStaticQuery } from "gatsby"
+import { GatsbyImage } from "gatsby-plugin-image"
+import React, { useContext, useState } from "react"
+import Heading from "../components/heading"
+import { MdLocationOn, MdMoreHoriz, MdWork } from "../components/icons"
+import ThemeContext from "../context/theme-context"
+import Tooltip from "@material-ui/core/Tooltip"
 
 const Work = () => {
-  const { dark } = useContext(ThemeContext);
-  const [max, setMax] = useState(4);
+  const { dark } = useContext(ThemeContext)
+  const [max, setMax] = useState(4)
   const data = useStaticQuery(graphql`
     {
       allWorkJson {
@@ -23,26 +22,24 @@ const Work = () => {
             specialization
             icon {
               childImageSharp {
-                fixed(height: 32) {
-                  ...GatsbyImageSharpFixed_withWebp
-                }
+                gatsbyImageData(height: 32)
               }
             }
           }
         }
       }
     }
-  `);
+  `)
 
   return (
     <section id="work">
       <Heading icon={MdWork} title="Work" />
 
-      <div className="flex w-1/2 m-auto justify-center" >
+      <div className="flex w-1/2 m-auto justify-center">
         <div className="w-1 bg-gray-500 rounded-full md:ml-6 opacity-25" />
-        <div className="-ml-2" >
+        <div className="-ml-2">
           {data.allWorkJson.edges.map(({ node }, index) => {
-            if (index >= max) return null;
+            if (index >= max) return null
 
             return (
               <div
@@ -61,7 +58,8 @@ const Work = () => {
                 <div className="ml-8">
                   <GatsbyImage
                     className="w-auto h-8 object-contain"
-                    {...node.icon.childImageSharp}
+                    image={node.icon.childImageSharp.gatsbyImageData}
+                    alt="company icon"
                   />
                   <div className="mt-3 flex items-baseline">
                     <h6 className="font-semibold">{node.title}</h6>
@@ -79,12 +77,12 @@ const Work = () => {
                   </h6>
                 </div>
               </div>
-            );
+            )
           })}
         </div>
       </div>
 
-      {(max <= 4  && data.allWorkJson.edges.length > 4) && (
+      {max <= 4 && data.allWorkJson.edges.length > 4 && (
         <div className="ml-12 mt-4 rounded-lg py-2 flex justify-center">
           <Tooltip title="Show More" placement="right">
             <div className="px-4" onClick={() => setMax(10)}>
@@ -94,7 +92,7 @@ const Work = () => {
         </div>
       )}
     </section>
-  );
-};
+  )
+}
 
-export default Work;
+export default Work

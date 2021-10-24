@@ -1,26 +1,26 @@
 .container {
   @apply grid grid-cols-2 mt-2;
 }
-  
+
 .gadget {
   min-width: 100px;
   max-width: 100px;
-  @apply mr-10 rounded-lg flex flex-col;
+  @apply mx-auto rounded-lg flex flex-col;
 }
-  
+
 @screen md {
   .container {
-    @apply grid-cols-3
+    @apply grid-cols-3;
   }
   .gadget {
     min-width: 120px;
     max-width: 120px;
   }
 }
-  
+
 @screen lg {
   .container {
-    @apply grid-cols-4
+    @apply grid-cols-4;
   }
   .gadget {
     min-width: 140px;
@@ -30,6 +30,6 @@
 
 @screen xl {
   .container {
-    @apply grid-cols-6
+    @apply grid-cols-6;
   }
 }

@@ -1,9 +1,17 @@
 [
   {
+    "icon": "../images/work/lt3.png",
+    "title": "LessThan3 Inc.",
+    "subtitle": "Full Stack Web Developer",
+    "period": "Oct 2021 - current",
+    "location": "Remotely, Canada",
+    "specialization": "React, Node.js, Express, MongoDB"
+  },
+  {
     "icon": "../images/work/apollo.png",
     "title": "Apollo Scientific.",
     "subtitle": "Full Stack Developer",
-    "period": "Feb 2021 - current",
+    "period": "Feb 2021 - Oct 2021",
     "location": "Remotely, Canada",
     "specialization": "React, Node.js, Material UI"
   },
