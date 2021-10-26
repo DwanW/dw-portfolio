@@ -6,7 +6,6 @@
   "author": "Dwan Wang <dwanvang@gmail.com>",
   "dependencies": {
     "@material-ui/core": "^4.12.3",
-    "@sendgrid/mail": "^7.5.0",
     "aos": "^2.3.4",
     "dotenv": "^10.0.0",
     "gatsby": "^4.0.0",
