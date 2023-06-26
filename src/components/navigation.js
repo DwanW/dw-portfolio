@@ -53,7 +53,7 @@ const Navigation = () => {
       <Tooltip
         key={sectionObj.id}
         title={sectionObj.title}
-        placement="bottom"
+        placement="left"
         arrow
       >
         <div onClick={() => scrollTo(sectionObj.id)}>
