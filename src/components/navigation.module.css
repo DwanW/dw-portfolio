@@ -51,7 +51,7 @@
     }
   
     .container .section-links div:hover {
-      color: theme("colors.primary.500");
+      color: theme("colors.green.500");
       @apply transition-default;
     }
   }

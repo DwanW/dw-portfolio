@@ -1,5 +1,4 @@
-import Tooltip from "@material-ui/core/Tooltip"
-import { OutboundLink } from "gatsby-plugin-google-gtag"
+import Tooltip from '@mui/material/Tooltip';
 import React from "react"
 import social from "../data/social"
 import { container } from "./social.module.css"
@@ -15,7 +14,7 @@ const Social = () => (
           title={socialObj.title}
           placement="bottom"
         >
-          <OutboundLink
+          <a
             href={socialObj.link}
             target="_blank"
             rel="noopener noreferrer"
@@ -24,7 +23,7 @@ const Social = () => (
           >
             <Icon color="#FFF" size="0.9em" />
             <span className="sr-only">{socialObj.title}</span>
-          </OutboundLink>
+          </a>
         </Tooltip>
       )
     })}

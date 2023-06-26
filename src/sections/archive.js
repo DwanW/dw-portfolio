@@ -1,10 +1,9 @@
 import { graphql, useStaticQuery } from "gatsby"
 import { GatsbyImage } from "gatsby-plugin-image"
-import { OutboundLink } from "gatsby-plugin-google-gtag"
 import React from "react"
 import Heading from "../components/heading"
 import { FaLink, IoIosJournal, FaGithub } from "../components/icons"
-import Tooltip from "@material-ui/core/Tooltip"
+import Tooltip from '@mui/material/Tooltip';
 import { container, gadget } from "./archive.module.css"
 
 const Archive = () => {
@@ -42,7 +41,7 @@ const Archive = () => {
             data-aos-delay={`${idx * 50 + 200}`}
           >
             <Tooltip title={node.label} placement="top">
-              <OutboundLink
+              <a
                 href={node.website || node.github}
                 target="_blank"
                 rel="noopener noreferrer"
@@ -54,14 +53,14 @@ const Archive = () => {
                   alt="archive item"
                 />
                 <span className="sr-only">{node.title}</span>
-              </OutboundLink>
+              </a>
             </Tooltip>
             <h6 className="mt-4 font-light">{node.title}</h6>
 
             <div className="flex mt-2 justify-start pb-12">
               {node.website && (
                 <Tooltip title="Go to Website" placement="bottom">
-                  <OutboundLink
+                  <a
                     href={node.website}
                     target="_blank"
                     rel="noopener noreferrer"
@@ -69,13 +68,13 @@ const Archive = () => {
                   >
                     <FaLink />
                     <span className="sr-only">Go to Website</span>
-                  </OutboundLink>
+                  </a>
                 </Tooltip>
               )}
 
               {node.github && (
                 <Tooltip title="Go to GitHub Repo" placement="bottom">
-                  <OutboundLink
+                  <a
                     href={node.github}
                     target="_blank"
                     rel="noopener noreferrer"
@@ -83,7 +82,7 @@ const Archive = () => {
                   >
                     <FaGithub />
                     <span className="sr-only">Go to GitHub Repo</span>
-                  </OutboundLink>
+                  </a>
                 </Tooltip>
               )}
             </div>

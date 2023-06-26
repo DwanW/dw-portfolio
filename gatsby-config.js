@@ -11,12 +11,6 @@ module.exports = {
     author: `Dwan Wang`,
   },
   plugins: [
-    {
-      resolve: `gatsby-plugin-google-gtag`,
-      options: {
-        trackingIds: [process.env.GA_TRACKING_ID],
-      },
-    },
     `gatsby-plugin-react-helmet`,
     {
       resolve: `gatsby-source-filesystem`,

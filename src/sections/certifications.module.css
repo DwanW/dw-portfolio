@@ -13,7 +13,7 @@
 
 .container:hover div:first-child {
   left: 0.8em;
-  color: theme("colors.primary.500");
+  color: theme("colors.green.500");
   transition: all 0.2s cubic-bezier(0.645, 0.045, 0.355, 1);
 }
 
@@ -23,6 +23,6 @@
 }
 
 .container:hover div:last-child h6 {
-  color: theme("colors.primary.500");
+  color: theme("colors.green.500");
   transition: all 0.2s cubic-bezier(0.645, 0.045, 0.355, 1);
 }

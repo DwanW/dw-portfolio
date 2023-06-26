@@ -1,6 +1,6 @@
 import React, { useContext, useEffect, useState } from "react"
 
-import Tooltip from "@material-ui/core/Tooltip"
+import Tooltip from '@mui/material/Tooltip';
 import { graphql, useStaticQuery } from "gatsby"
 import { GatsbyImage } from "gatsby-plugin-image"
 
