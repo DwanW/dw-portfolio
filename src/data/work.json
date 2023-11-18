@@ -1,11 +1,19 @@
 [
   {
-    "icon": "../images/work/lt3.png",
-    "title": "LessThan3 Inc.",
-    "subtitle": "Full Stack Web Developer",
+    "icon": "../images/work/lt3.jpg",
+    "title": "LT3 ATG",
+    "subtitle": "Full Stack Developer",
     "period": "Oct 2021 - current",
-    "location": "Remotely, Canada",
-    "specialization": "React, Node.js, Express, MongoDB"
+    "location": "Calgary AB, Canada",
+    "specialization": "MERN, SDLC"
+  },
+  {
+    "icon": "../images/work/dw.png",
+    "title": "DW Interactive Dev.",
+    "subtitle": "Full Stack Developer",
+    "period": "Nov 2020 - Nov 2021",
+    "location": "Calgary AB, Canada",
+    "specialization": "React, Gatsby, Netlify CMS"
   },
   {
     "icon": "../images/work/apollo.png",
@@ -14,14 +22,6 @@
     "period": "Feb 2021 - Oct 2021",
     "location": "Remotely, Canada",
     "specialization": "React, Node.js, Material UI"
-  },
-  {
-    "icon": "../images/work/dw.png",
-    "title": "DW Interactive Dev.",
-    "subtitle": "Full Stack Web Developer",
-    "period": "Nov 2020 - current",
-    "location": "Remotely, Canada",
-    "specialization": "React, Gatsby, Netlify CMS"
   },
   {
     "icon": "../images/work/mcw.png",

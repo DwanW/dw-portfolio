@@ -1,34 +1,57 @@
 [
-    {
-      "image": "../images/projects/chat.png",
-      "title": "Live Chat",
-      "description": "A simple tool to group chat.",
-      "tags": ["webdev", "node", "javascript", "socket.io"],
-      "website": "https://dw-chat-app.herokuapp.com/",
-      "github": "https://github.com/DwanW/dw-chat"
-    },
-    {
-      "image": "../images/projects/camel.png",
-      "title": "Camel Delivery",
-      "description": "A food online ordering platform that features scheduled delivery plan for the best food in your local area.",
-      "tags": ["webdev", "fullstack", "react", "python", "postgres", "SASS"],
-      "website": "https://dw-camel.netlify.app/",
-      "github": "https://github.com/DwanW/delivery-sim-react"
-    },
-    {
-      "image": "../images/projects/emoji.png",
-      "title": "Emoji Party",
-      "description": "A fun casual local multiplayer board game",
-      "tags": ["webdev", "frontend", "react", "context API"],
-      "website": "https://emoji-party.netlify.app/",
-      "github": "https://github.com/DwanW/super-emoji-party"
-    },
-    {
-      "image": "../images/projects/calorie.png",
-      "title": "Calorie Calculator",
-      "description": "simple and straight forward tool for health management",
-      "tags": ["webdev","react", "node.js", "postgres", "material UI"],
-      "website": "https://dw-calorie.herokuapp.com/",
-      "github": "https://github.com/DwanW/tier3-calorie"
-    }
-  ]
+  {
+    "image": "../images/projects/chat.png",
+    "title": "AI ChatBot",
+    "description": "A simple tool to group chat.",
+    "tags": [
+      "webdev",
+      "node",
+      "javascript",
+      "socket.io"
+    ],
+    "website": "https://dw-chat-app.herokuapp.com/",
+    "github": "https://github.com/DwanW/dw-chat"
+  },
+  {
+    "image": "../images/projects/camel.png",
+    "title": "Camel Delivery",
+    "description": "A food online ordering platform that features scheduled delivery plan for the best food in your local area.",
+    "tags": [
+      "webdev",
+      "fullstack",
+      "react",
+      "python",
+      "postgres",
+      "SASS"
+    ],
+    "website": "https://dw-camel.netlify.app/",
+    "github": "https://github.com/DwanW/delivery-sim-react"
+  },
+  {
+    "image": "../images/projects/emoji.png",
+    "title": "Emoji Party",
+    "description": "A fun casual local multiplayer board game",
+    "tags": [
+      "webdev",
+      "frontend",
+      "react",
+      "context API"
+    ],
+    "website": "https://emoji-party.netlify.app/",
+    "github": "https://github.com/DwanW/super-emoji-party"
+  },
+  {
+    "image": "../images/projects/calorie.png",
+    "title": "Calorie Calculator",
+    "description": "simple and straight forward tool for health management",
+    "tags": [
+      "webdev",
+      "react",
+      "node.js",
+      "postgres",
+      "material UI"
+    ],
+    "website": "https://dw-calorie.herokuapp.com/",
+    "github": "https://github.com/DwanW/tier3-calorie"
+  }
+]
